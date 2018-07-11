@@ -1,0 +1,54 @@
+{
+    "Tests": [
+        {
+            "Convey": "Use commit function to add a country",
+            "Zome": "countries",
+            "FnName": "addCountry",
+            "Input": "Canada",
+            "Output": "%h%"
+        },
+        {
+            "Convey": "adding country should fail if name is longer than 20 characters",
+            "Zome": "countries",
+            "FnName": "addCountry",
+            "Input": "Democratic Republic of the Congo",
+            "ErrMsg": "Validation Failed"
+        },
+        {
+            "Convey": "Add another country",
+            "Zome": "countries",
+            "FnName": "addCountry",
+            "Input": "Germany",
+            "Output": "%h%"
+        },
+        {
+            "Convey": "Use get function to retrieve the Canada entry",
+            "Zome": "countries",
+            "FnName": "getCountry",
+            "Input": "%result0%",
+            "Output": "Canada"
+        },
+        {
+            "Convey": "Add link between Canada and Germany",
+            "Zome": "countries",
+            "FnName": "linkCountries",
+            "Input": { "from": "%result0%", "to": "%result2%", "tag": "friends" },
+            "Output": "%h%"
+        },
+        {
+            "Convey": "Use getLinks (with an empty tag and Load:true) to find countries related to Canada",
+            "Zome": "countries",
+            "FnName": "getLinkedCountries",
+            "Input": { "from": "%result0%" },
+            "Output": [
+                {
+                    "Entry": "Germany",
+                    "EntryType": "country",
+                    "Hash": "QmWCvRawVtmhgxzKXzgRJmoJ1ABv6gcBEdRaLnnbG3hjhW",
+                    "Source": "QmQJEN8m6mts97DqGXjRsjRsHrDvBp5xcZpGk7WkZ6QBw9",
+                    "Tag": "friends"
+                }
+            ]
+        }
+    ]
+}

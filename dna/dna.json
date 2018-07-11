@@ -14,12 +14,39 @@
     },
     "Zomes": [
         {
-            "Name": "testZome",
-            "Description": "zome where you will define all your functions",
-            "CodeFile": "testZome.js",
+            "Name": "countries",
+            "Description": "zome where you will write all your functions",
+            "CodeFile": "countries.js",
             "RibosomeType": "js",
-            "Entries": [],
-            "Functions": []
+            "Entries": [
+                {
+                    "Name": "country",
+                    "DataFormat": "string",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "countryLinks",
+                    "DataFormat": "links"
+                }
+            ],
+            "Functions": [
+                {
+                    "Name": "addCountry",
+                    "CallingType": "string"
+                },
+                {
+                    "Name": "getCountry",
+                    "CallingType": "string"
+                },
+                {
+                    "Name": "linkCountries",
+                    "CallingType": "json"
+                },
+                {
+                    "Name": "getLinkedCountries",
+                    "CallingType": "json"
+                }
+            ]
         }
     ]
 }
