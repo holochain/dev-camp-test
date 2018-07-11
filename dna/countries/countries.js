@@ -10,23 +10,27 @@ function genesis() {
 }
 
 function addCountry(country) {
-  // add code here
-  // use 'commit'
+  return commit("country", country);
 }
 
 function getCountry(hash) {
-  // add code here
-  // use 'get'
+  return get(hash);
 }
 
 function linkCountries(inputs) {
-  // add code here
-  // use commit (for links entry type)
+  return commit("countryLinks", {
+    Links: [
+      {
+        Base: inputs.from,
+        Link: inputs.to,
+        Tag: inputs.tag
+      }
+    ]
+  });
 }
 
 function getLinkedCountries(inputs) {
-  // add code here
-  // use getLinks
+  return getLinks(inputs.from, "", { Load: true })
 }
 
 /*
@@ -36,16 +40,31 @@ function getLinkedCountries(inputs) {
  */
 
 function validateCommit(entryType, entry, header, package, sources) {
-  // add code here
-  // differentiate between countryLinks type and country type
+  if (entryType === "countryLinks") {
+    return true;
+  }
+
+  if (entry.length < 20) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function validatePut(entryType, entry, header, package, sources) {
-  // add code here
-  // differentiate between countryLinks type and country type
+  if (entryType === "countryLinks") {
+    return true;
+  }
+
+  if (entry.length < 20) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function validateLink(entryType, hash, links, package, sources) {
-  // add code here
-  // only need to validate for countryLinks type
+  if (entryType === "countryLinks") {
+    return true;
+  }
 }
