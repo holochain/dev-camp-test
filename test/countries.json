@@ -36,16 +36,13 @@
             "Output": "%h%"
         },
         {
-            "Convey": "Use getLinks (with an empty tag and Load:true) to find countries related to Canada",
+            "Convey": "Use getLinks (with an empty tag) to find countries related to Canada",
             "Zome": "countries",
             "FnName": "getLinkedCountries",
             "Input": { "from": "%result0%" },
             "Output": [
                 {
-                    "Entry": "Germany",
-                    "EntryType": "country",
                     "Hash": "QmWCvRawVtmhgxzKXzgRJmoJ1ABv6gcBEdRaLnnbG3hjhW",
-                    "Source": "QmQJEN8m6mts97DqGXjRsjRsHrDvBp5xcZpGk7WkZ6QBw9",
                     "Tag": "friends"
                 }
             ]

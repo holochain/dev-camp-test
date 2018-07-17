@@ -30,7 +30,7 @@ function linkCountries(inputs) {
 }
 
 function getLinkedCountries(inputs) {
-  return getLinks(inputs.from, "", { Load: true })
+  return getLinks(inputs.from, "")
 }
 
 /*
