@@ -35,16 +35,18 @@ What does this all mean?
 - Input is the value the test will pass to the function, in this case 'Canada'
 - Output is the value we expect calling the function to result in
 
-Where you see %h% in `Output` may look confusing. To see an explanation, go to the [testing page](https://developer.holochain.org/Test_Driven_Development) on the developer documentation, and check out the Replacement Strings section.
+Where you see `%h%` in `Output` may look confusing. To see an explanation, go to the [testing page](https://developer.holochain.org/Test_Driven_Development) on the developer documentation, and check out the Replacement Strings section.
 
 Now, open the file `/dna/countries/countries.js` in your code editor. This will be where you will be working to solve the tests.
 
 Look for the function `addCountry` in the code.
+
 ![addCountry test](images/add-country.png)
+
 When it says to "use 'commit'" function, it means to look up the `commit` function in the developer documention, on the [API page](https://developer.holochain.org/API). This will tell you how to use this function, what it does, and show you an example. Use that knowledge to write the code to make the function work as expected.
 
 When you've written the code, go back to the terminal and run `hcdev test` again. If you've succeeded, the terminal will say that only 4 tests failed, down from 6, and show this result for the first test.
-![first-test-succeed](images/first-test-succeed)
+![first-test-succeed](images/first-test-succeed.png)
 
 Repeat this for all the remaining tests one by one until they are all passing.
 If you get really stuck, or you've completed it and want to see the solutions, check them out [here](https://github.com/holochain/dev-camp-test/tree/solution).
