@@ -49,7 +49,7 @@ When you've written the code, go back to the terminal and run `hcdev test` again
 ![first-test-succeed](images/first-test-succeed.png)
 
 Repeat this for all the remaining tests one by one until they are all passing.
-If you get really stuck, or you've completed it and want to see the solutions, check them out [here](https://github.com/holochain/dev-camp-test/tree/solution).
+If you get really stuck, or you've completed it and want to see the solutions, check them out in the [solution branch of this repository](https://github.com/holochain/dev-camp-test/tree/solution).
 
 
 
