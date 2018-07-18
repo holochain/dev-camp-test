@@ -1,4 +1,4 @@
-# dev-camp-test
+# Learn basic Read, Write, and Validation capabilities on Holochain
 This repository can be used for learning some of the basic read/write capabilities of Holochain. 
 
 It uses a pattern known as "test-driven development", which means that there are "tests" predefined. It attempts to call a function, passes an example input, and expects a particular output. Your job is to complete the code within the functions so that they succeed rather than fail.
